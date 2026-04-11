@@ -23,8 +23,8 @@ By capturing acoustic pulmonary data and processing it locally via Edge-AI, VITA
 ## 📂 Hardware Support & Versions
 Project VITALIS currently supports two different microcontroller architectures. Please navigate to the appropriate folder for your specific hardware:
 
-* **[Hardware V2 (XIAO ESP32-C6)](./Hardware_V2_XIAO_C6):** The primary miniaturized commercial prototype. Utilizes a 160MHz RISC-V architecture optimized for extreme low-latency edge inference (Inference time: 6ms). *[C++ Implementation Pending]*
-* **[Hardware V1 (Classic ESP32)](./Hardware_V1_Classic_ESP32):** The original baseline model utilizing the 240MHz dual-core Xtensa architecture. Ideal for legacy environments and standard ESP32 DevKits.
+* **[Hardware V2 (XIAO ESP32-C6)](/Arduino%20Code/XIAO%20ESP32C6):** The primary miniaturized commercial prototype. Utilizes a 160MHz RISC-V architecture optimized for extreme low-latency edge inference (Inference time: 6ms). *[C++ Implementation Pending]*
+* **[Hardware V1 (Classic ESP32)](/Arduino%20Code/ESP-32-WROOM):** The original baseline model utilizing the 240MHz dual-core Xtensa architecture. Ideal for legacy environments and standard ESP32 DevKits.
 
 ---
 
