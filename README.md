@@ -23,7 +23,8 @@ By capturing acoustic pulmonary data and processing it locally via Edge-AI, VITA
 
 ---
 ## 5W1H
-!(images/5w1h.png)
+<img width="429" height="475" alt="5w1h" src="https://github.com/user-attachments/assets/a906d8c5-4656-48b1-bdde-556384406ec9" />
+
 
 ---
 
