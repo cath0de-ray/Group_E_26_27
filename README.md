@@ -22,6 +22,10 @@
 By capturing acoustic pulmonary data and processing it locally via Edge-AI, VITALIS identifies respiratory anomalies (Wheezes, Crackles, Rhonchi) in real-time. It is specifically designed to empower NGO field workers and frontline health staff in resource-depleted environments to perform rapid medical identification without requiring an internet connection or an on-site pulmonologist.
 
 ---
+## 5W1H
+!(images/5w1h.png)
+
+---
 
 ## 📂 Hardware Support & Versions
 Project VITALIS currently supports two different microcontroller architectures. Please navigate to the appropriate folder for your specific hardware:
