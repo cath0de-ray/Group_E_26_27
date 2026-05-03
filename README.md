@@ -107,3 +107,55 @@ The AI model was trained using the HLS-CMDS dataset.
 ---
 **Institution:** Jagran Public School, Noida  
 **Submission:** CBSE Class 12 Artificial Intelligence Practical (2026-27)
+
+``` 
+---
+config:
+  layout: dagre
+---
+graph TD
+    classDef terminator fill:#000,stroke:#f8fafc,stroke-width:2px,color:#f8fafc;
+    classDef io fill:#0a2a5e,stroke:#0ea5e9,stroke-width:2px,color:#fff;
+    classDef process fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
+    classDef decision fill:#1e293b,stroke:#00d1b2,stroke-width:3px,color:#fff;
+    START([Start: Device Activation]):::terminator
+
+    N1[/Input: INMP441 Captures Audio Data/]:::io
+    
+    subgraph Pre-Processing
+        N2[Process: I2S Digital Conversion]:::process
+        N3[Process: Feature Extraction]:::process
+    end
+    D1{Is it Normal Lungs?}:::decision
+    D2{Is it Wheeze?}:::decision
+    D3{Is it Crackles?}:::decision
+    D4{Is it Rhonchi?}:::decision
+    OUT_NORMAL[\Output: Send 'Normal' to Mobile App\]:::io
+    OUT_WHEEZE[\Output: Send 'Wheeze Detected' to Mobile App\]:::io
+    OUT_CRACKLE[\Output: Send 'Crackles Detected' to Mobile App\]:::io
+    OUT_RHONCHI[\Output: Send 'Rhonchi Detected' to Mobile App\]:::io
+    OUT_UNKNOWN[\Output: Send 'Unrecognized Sound' to Mobile App\]:::io
+
+    END([Stop: Diagnostic Finished]):::terminator
+    START --> N1
+    N1 --> N2
+    N2 --> N3
+    N3 --> D1
+    
+    D1 -- Yes --> OUT_NORMAL
+    D1 -- No --> D2
+    
+    D2 -- Yes --> OUT_WHEEZE
+    D2 -- No --> D3
+    
+    D3 -- Yes --> OUT_CRACKLE
+    D3 -- No --> D4
+    
+    D4 -- Yes --> OUT_RHONCHI
+    D4 -- No --> OUT_UNKNOWN
+    OUT_NORMAL --> END
+    OUT_WHEEZE --> END
+    OUT_CRACKLE --> END
+    OUT_RHONCHI --> END
+    OUT_UNKNOWN --> END 
+    ```
